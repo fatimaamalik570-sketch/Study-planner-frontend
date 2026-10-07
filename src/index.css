@@ -843,6 +843,139 @@ a {
   transform: translateY(-1px);
 }
 
+.management-page {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+  padding: 7px 0;
+  background: transparent;
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  color: var(--purple);
+}
+
+.management-page .page-heading {
+  margin-bottom: 22px;
+}
+
+.management-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.management-form > label,
+.management-form .form-grid label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.management-form input,
+.management-form select,
+.management-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #d7dfeb;
+  border-radius: 7px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.management-form input {
+  min-height: 44px;
+}
+
+.management-form textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.management-form input::placeholder,
+.management-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.management-form input:focus,
+.management-form select:focus,
+.management-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.management-form .form-wide,
+.management-form .form-actions {
+  grid-column: 1 / -1;
+}
+
+.management-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.management-form .form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.management-form .form-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 11px 13px;
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.management-form .secondary-btn {
+  padding: 11px 16px;
+}
+
+@media (max-width: 650px) {
+  .management-form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .management-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
 /* =========================
    EXAMS
 ========================= */

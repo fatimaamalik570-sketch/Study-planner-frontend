@@ -48,7 +48,7 @@ function CreateSchedule() {
       <button className="back-btn" onClick={() => navigate("/teacher/schedule")}><ArrowLeft size={17} /> Back to Schedule</button>
       <div className="page-heading"><div><h1>{existing ? "Edit Class" : "Add Class"}</h1><p>Schedule a class or teaching session.</p></div></div>
       <form className="management-form" onSubmit={save}>
-        <div className="form-grid">
+        <div className="form-grid form-wide">
           <label>Subject
             <select name="subject" value={form.subject} onChange={update} required>
               <option value="">Select subject</option>
@@ -64,7 +64,6 @@ function CreateSchedule() {
             </select>
           </label>
           <label>Date<input type="date" name="date" value={form.date} onChange={update} required /></label>
-          <span />
           <label>Start Time<input type="time" name="startTime" value={form.startTime} onChange={update} required /></label>
           <label>End Time<input type="time" name="endTime" min={form.startTime || undefined} value={form.endTime} onChange={update} required /></label>
           <label>Session Type
